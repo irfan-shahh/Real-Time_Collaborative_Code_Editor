@@ -3,6 +3,8 @@
 
 A Real-Time collaborative coding platform that enables multiple developers to write, edit, and debug code together in real-time. Built with Yjs CRDT for conflict-free synchronization, dual WebSocket architecture, and Monaco Editor integration.
 
+DEMO_LINK: https://drive.google.com/file/d/1CC8BPnnwSF56Xxue8mh64T4fKniTgREt/view?usp=sharing
+
 ## Overview
 
 This platform delivers seamless real-time collaboration for software development teams, featuring synchronized editing, live cursor tracking, session management, and role-based access control. The system ensures zero-conflict concurrent editing through Yjs CRDT and session management through raw websockets.
@@ -44,7 +46,7 @@ This platform delivers seamless real-time collaboration for software development
 - **Error Handling**: Clear feedback for connection issues and failed operations
 - **Loading States**: Visual indicators during asynchronous operations
 
-## 🏗️ Architecture
+##  Architecture
 
 ### System Overview
 ```
@@ -119,5 +121,28 @@ This platform delivers seamless real-time collaboration for software development
 - **Client ID Tracking**: Unique identifiers prevent duplicate connections
 - **Admin Authorization**: Kick/end operations restricted to session creators
 - **Connection Cleanup**: Proper resource disposal on disconnect
+  
+## Future Improvements
 
+- [ ] Multi-file support with file tree navigation
+- [ ] Integrated terminal for code execution
+- [ ] Syntax highlighting themes and language plugins
+- [ ] Video/voice chat integration
+- [ ] Screen sharing for debugging sessions
+- [ ] Code review and commenting system
+- [ ] Session recording and playback
+- [ ] Plugin system for custom extensions
+
+---
+
+## What I Learned
+
+- **CRDT Theory**: Understanding operational transformation vs CRDTs and why CRDTs are simpler for 
+  distributed systems
+- **WebSocket Architecture**: Designing dual-server systems and choosing between binary vs JSON protocols
+- **State Synchronization**: Implementing efficient latecomer sync without transferring entire history
+- **Connection Resilience**: Handling network interruptions gracefully without losing user state
+- **Database Design**: Schema design for multi-tenant collaborative systems with role-based access
+
+---
 
